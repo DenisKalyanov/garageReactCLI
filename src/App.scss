@@ -1,0 +1,13 @@
+// @import "normalize.css";
+@import "./styles/common/reset.scss";
+@import "./styles/common/colors.scss";
+@import "./styles/common/common.scss";
+
+body {
+  font-family: "Arial";
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  background-color: $backgroundBlue;
+  width: 100%;
+  min-width: 320px;
+}

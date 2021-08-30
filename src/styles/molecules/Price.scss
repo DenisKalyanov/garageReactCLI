@@ -1,0 +1,181 @@
+@import "../common/breakpoints.scss";
+@import "../common/fonts.scss";
+@import "../common/colors.scss";
+
+.price-wrapper {
+  display: flex;
+  margin-right: 20px;
+  width: 100%;
+
+  .price-left {
+    width: 48%;
+    @include middleMobile {
+      margin-right: 0;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .price-left__first {
+      background-color: $realWhite;
+      border-radius: 20px 0 0 0;
+      padding: 7px;
+      background-image: url(../../assets/images/car.png);
+      background-repeat: no-repeat;
+      background-size: 35vw;
+      background-position: right -20px bottom -20px;
+      height: 80%;
+      .price-title {
+        @include subTitle;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      .price-description {
+        @include description;
+        color: $lightGrey;
+      }
+    }
+    .price-left__second {
+      @include time;
+      font-size: 16px;
+      background-color: $realWhite;
+      border-radius: 0 0 0 20px;
+      padding: 7px;
+      padding-right: 25px;
+      margin-top: 8px;
+      position: relative;
+      height: 20%;
+      padding-top: 5%;
+      .price-template__percent {
+        @include time;
+        font-size: 16px;
+        color: $realWhite;
+        position: absolute;
+        background-color: red;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        top: -7px;
+        right: -8px;
+        text-align: center;
+        padding-top: 10px;
+      }
+    }
+  }
+  .price-right {
+    width: 48%;
+    margin-left: 2%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .price-right__wrapper {
+      display: flex;
+      justify-content: flex-start;
+      background-color: $realWhite;
+      padding: 15px 10px 0;
+      @include middleMobile {
+        padding: 15px 3px 0;
+        justify-content: center;
+        height: 30%;
+        border-radius: 10px;
+      }
+      position: relative;
+      flex-wrap: wrap;
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+        border-radius: 0 0 10px 0;
+        @include middleMobile {
+          border-radius: 10px;
+        }
+      }
+
+      .price-right-template {
+        margin-right: 5px;
+        margin-bottom: 8px;
+        @include middleMobile {
+          max-width: 50px;
+          margin-right: 3px;
+        }
+        .price-right-template__top {
+          color: $realWhite;
+          background-color: $orange;
+          border-radius: 5px;
+          text-align: center;
+          padding: 2px;
+
+          .price-right-template-time {
+            @include subTitle;
+            font-size: 18px;
+          }
+          .price-right-template-hour {
+            @include subTitle;
+            font-size: 16px;
+            @include middleMobile {
+              font-size: 14px;
+            }
+          }
+        }
+        .price-right-template__bottom {
+          color: $realBlack;
+          background-color: $backgroundBlue;
+          border-radius: 5px;
+          text-align: center;
+          @include time;
+          font-size: 14px;
+          font-style: italic;
+          padding: 4px 0;
+          margin-top: 5px;
+        }
+      }
+      .price-right-template__percent {
+        @include time;
+        font-size: 16px;
+        color: $realWhite;
+        position: absolute;
+        background-color: red;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        top: -7px;
+        right: -8px;
+        text-align: center;
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+.price-template {
+  width: 40%;
+  margin: 7px 0;
+  .price-template__top {
+    color: $realWhite;
+    width: 100%;
+    background-color: $orange;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2px;
+
+    .price-template-time {
+      @include subTitle;
+      font-size: 30px;
+    }
+    .price-template-hour {
+      @include subTitle;
+    }
+  }
+  .price-template__bottom {
+    color: $realBlack;
+    background-color: $backgroundBlue;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    @include time;
+    font-style: italic;
+    padding: 4px 0;
+    margin-top: 5px;
+  }
+}

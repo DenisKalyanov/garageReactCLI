@@ -1,0 +1,113 @@
+@import "../common/breakpoints.scss";
+@import "../common/fonts.scss";
+@import "../common/colors.scss";
+
+.main {
+  margin-top: 70px;
+  .about-me__wrapper {
+    background-color: $realWhite;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+    .subtitle {
+      @include subTitle;
+      margin: 5px 0 10px;
+    }
+    .description {
+      @include description;
+      color: $lightGrey;
+    }
+  }
+
+  .main-catalog__menu__wrapper {
+    padding-right: 20px;
+
+    border: none;
+    outline: none;
+    .main-catalog__menu {
+      display: block;
+      @include linkBurgerMenu;
+      font-size: 20px;
+      background-color: $realWhite;
+      padding: 0 20px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      &:hover{
+        color: inherit;
+      }
+    }
+  }
+
+  .main-catalog__item__wrapper {
+    margin-top: 10px;
+    padding-right: 20px;
+    border: none;
+    outline: none;
+    .main-catalog__item {
+      display: flex;
+      flex-direction: column;
+      background-color: $realWhite;
+      border-radius: 10px;
+      width: 70vw;
+      padding: 10px 10px 10px 20px;
+      .main-catalog__item__header {
+        display: flex;
+        justify-content: space-between;
+        .main-catalog__item__title {
+          @include catalogTitle;
+        }
+        .main-catalog__status {
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: lawngreen;
+        }
+      }
+      .main-catalog__item__content {
+        display: flex;
+        align-items: flex-start;
+        .main-catalog__item__image {
+          width: 120px;
+          height: 120px;
+          object-fit: cover;
+          padding-top: 10px;
+        }
+        .main-catalog__item__description {
+          margin: 0 10px;
+          .main-catalog__item__description__title {
+            @include catalogTitle;
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 4px;
+            @include littleMobile {
+              font-size: 14px;
+            }
+          }
+          .main-catalog__item__description__description {
+            @include catalogTitle;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-nav__wrapper {
+  background-color: $realWhite;
+  border-radius: 20px 0 0 20px;
+  .main-nav__item {
+    padding: 0 20px;
+    @include linkBurgerMenu;
+    font-size: 20px;
+    border: none;
+    outline: none;
+  }
+}
+
+.common-title {
+  @include title;
+  color: $lightGrey;
+}

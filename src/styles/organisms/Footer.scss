@@ -1,0 +1,59 @@
+@import "../common//breakpoints.scss";
+@import "../common/fonts.scss";
+@import "../common/colors.scss";
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  margin: 0 10px;
+  .footer__social {
+    .footer__social__title {
+      @include description;
+      font-weight: 800;
+      color: $grey;
+      margin-bottom: 5px;
+    }
+
+    .footer__buttons {
+      display: flex;
+      align-items: center;
+      .footer__button {
+        border: none;
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .footer__phone {
+      position: relative;
+      @include contacts;
+      font-size: 16px;
+      color: $grey;
+      &::before {
+        // @include svgBeforePosition;
+        // background-image: url(../../assets/phone.svg);
+      }
+    }
+    .footer__email {
+      position: relative;
+      @include contacts;
+      font-size: 16px;
+      color: $grey;
+      &::before {
+        // @include svgBeforePosition;
+        // background-image: url(../../assets/cashback.svg);
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "../common/breakpoints.scss";
+@import "../common/fonts.scss";
+@import "../common/colors.scss";
+
+.bonus.common-margin {
+  margin-right: 20px;
+  .bonus__description {
+    @include description;
+  }
+  .bonus__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    .bonus__item {
+      padding: 5px;
+      background-color: $realWhite;
+      width: 49%;
+      margin-bottom: 7px;
+      border-radius: 10px;
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      @include middleMobile {
+        width: 100%;
+        min-height: 30px;
+      }
+      .bonus__item__image {
+        width: 35px;
+        height: 35px;
+        @include middleMobile {
+          width: 25px;
+          height: 25px;
+        }
+        margin-right: 7px;
+      }
+      .bonus__item__text {
+        width: 77%;
+        word-wrap: break-word;
+        @include time;
+        font-size: 14px;
+        @include middleMobile {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

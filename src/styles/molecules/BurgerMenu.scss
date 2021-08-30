@@ -1,0 +1,115 @@
+@import "../common/breakpoints.scss";
+@import "../common/fonts.scss";
+@import "../common/colors.scss";
+
+@mixin svgBeforePosition {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -25px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.burger-menu {
+  background-color: $backgroundBlue;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 5;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 85%;
+  height: 100%;
+  padding-top: 20px;
+  -webkit-box-shadow: -10px 0px 27px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: -10px 0px 27px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: -10px 0px 27px 0px rgba(34, 60, 80, 0.2);
+  -webkit-overflow-y: auto;
+  -moz-overflow-y: auto;
+  overflow-y: auto;
+
+  .burger-menu__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 15px;
+    align-items: center;
+    .common-title {
+      @include title;
+      color: $lightGrey;
+    }
+  }
+
+  .burger-menu__time {
+    @include title;
+    color: $lightGrey;
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .burger-menu__button {
+    font-size: 20px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: $realWhite;
+    margin-right: 20px;
+  }
+
+  .burger-menu__main-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    .burger-menu__links {
+      padding: 20px;
+      padding-top: 0;
+      width: 100%;
+      background-image: url(../../assets/burger-menu-man.png);
+      background-repeat: no-repeat;
+      background-size: 45vw;
+      background-position: -20px 10vh;
+      .burger-menu__link {
+        @include linkBurgerMenu;
+        display: block;
+        color: $grey;
+        text-decoration: none;
+        padding: 1vh 0;
+        width: 100%;
+        text-align: right;
+      }
+    }
+
+    .burger-menu_contacts {
+      display: flex;
+      flex-direction: column;
+      margin: 10%;
+      margin-bottom: 17%;
+      .burger-menu__phone {
+        margin-bottom: 15px;
+        position: relative;
+        @include contacts;
+        color: $grey;
+        &::before {
+          @include svgBeforePosition;
+          // background-image: url(../../assets/phone.svg);
+        }
+      }
+      .burger-menu__email {
+        position: relative;
+        margin-bottom: 15px;
+        @include contacts;
+        color: $grey;
+        &::before {
+          @include svgBeforePosition;
+          // background-image: url(../../assets/cashback.svg);
+        }
+      }
+    }
+  }
+}

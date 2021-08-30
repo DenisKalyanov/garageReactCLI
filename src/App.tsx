@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import loadable from "@loadable/component";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Header from "./components/organism/Header";
+import Main from "./components/organism/Main";
+import "./App.scss";
+import { GlobalProvider } from "./store/state";
+
+const Footer = loadable(() => import("./components/organism/Footer"));
+
+const App: React.FC = (): JSX.Element => (
+  <>
+    <GlobalProvider>
+      <Header />
+      <Main />
+      <Footer />
+    </GlobalProvider>
+  </>
+);
 
 export default App;
