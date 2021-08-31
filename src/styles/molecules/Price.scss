@@ -21,7 +21,13 @@
       padding: 7px;
       background-image: url(../../assets/images/car.png);
       background-repeat: no-repeat;
-      background-size: 35vw;
+      background-size: auto 75%;
+      @include mobile {
+        background-size: auto 65%;
+      }
+      @include middleMobile {
+        background-size: auto 50%;
+      }
       background-position: right -20px bottom -20px;
       height: 80%;
       .price-title {
@@ -115,6 +121,9 @@
             font-size: 16px;
             @include middleMobile {
               font-size: 14px;
+            }
+            @include littleMobile {
+              font-size: 13px;
             }
           }
         }

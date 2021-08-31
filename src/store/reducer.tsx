@@ -1,12 +1,9 @@
 interface InitialState {
   visible: boolean;
-  vary: any;
 }
 
 type ActionType =
-  | { type: "CHANGE_VISIBLE"; payload: boolean }
-  | { type: "CHANGE_CURRENT_LIST"; payload: any };
-
+  | { type: "CHANGE_VISIBLE"; payload: boolean };
 export default function appReducer(
   state: InitialState,
   action: ActionType
@@ -16,11 +13,6 @@ export default function appReducer(
       return {
         ...state,
         visible: action.payload,
-      };
-    case "CHANGE_CURRENT_LIST":
-      return {
-        ...state,
-        vary: action.payload,
       };
     default:
       return state;

@@ -1,4 +1,3 @@
-import React from "react";
 import "../../styles/molecules/Price.scss";
 import TimeCoast from "../atoms/TimeCoast";
 
@@ -20,7 +19,8 @@ const Price = (): JSX.Element => {
   ];
 
   return (
-    <section className="common-margin">
+    <section className="common-margin common__top-margin__wrapper">
+      <div id="price" className="common__top-margin" />
       <h2 className="common-title">
         <span className="orange-letter">Ц</span>ены
       </h2>

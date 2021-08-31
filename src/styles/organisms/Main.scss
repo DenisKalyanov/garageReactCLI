@@ -28,14 +28,17 @@
       display: block;
       @include linkBurgerMenu;
       font-size: 20px;
-      background-color: $realWhite;
+      background-color: $backgroundMenuLightBlue;
+      color: $grey;
       padding: 0 20px;
       border-radius: 20px;
       border: none;
       outline: none;
-      &:hover{
+    }
+    .main-catalog__menu__active {
         color: inherit;
-      }
+        background-color: $realWhite;
+
     }
   }
 
@@ -49,8 +52,11 @@
       flex-direction: column;
       background-color: $realWhite;
       border-radius: 10px;
-      width: 70vw;
+      max-width: 270px;
       padding: 10px 10px 10px 20px;
+      @include mobile {
+        width: 70vw;
+      }
       .main-catalog__item__header {
         display: flex;
         justify-content: space-between;
@@ -69,8 +75,7 @@
         display: flex;
         align-items: flex-start;
         .main-catalog__item__image {
-          width: 120px;
-          height: 120px;
+          width: 50%;
           object-fit: cover;
           padding-top: 10px;
         }
@@ -109,5 +114,5 @@
 
 .common-title {
   @include title;
-  color: $lightGrey;
+  color: $grey;
 }

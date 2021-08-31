@@ -1,15 +1,13 @@
-import React, { createContext, useReducer } from "react";
+import { createContext, useReducer } from "react";
 
 import reducer from "./reducer";
 
 export interface InitialState {
   visible: boolean;
-  vary: any;
 }
 
 const initialState: InitialState = {
   visible: false,
-  vary: null,
 };
 
 export const GlobalContext = createContext<any>(initialState);

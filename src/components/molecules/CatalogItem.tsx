@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 
 type Props = {
@@ -22,7 +21,7 @@ const CatalogItem: React.FC<Props> = (props): JSX.Element => {
     <Slider {...settings}>
       {currentList.map(
         // @ts-ignore
-        (item): JSX.Element => (
+        (item) => (
           <div key={item.title} className="main-catalog__item__wrapper">
             <div className="main-catalog__item">
               <div className="main-catalog__item__header">

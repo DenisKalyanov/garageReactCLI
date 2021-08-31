@@ -1,9 +1,9 @@
-import React from "react";
 import "../../styles/molecules/Bonus.scss";
 import "../../styles/molecules/Map.scss";
 
-const Map: React.FC = (): JSX.Element => (
-  <section className="map_wrapper">
+
+const Map: React.FC<any> = () => (
+  <section className="map_wrapper" id="map">
     <h2 className="common-title map__tittle">
       <span className="orange-letter">М</span>ы находимся
     </h2>

@@ -7,7 +7,6 @@ import "./App.scss";
 import { GlobalProvider } from "./store/state";
 
 const Footer = loadable(() => import("./components/organism/Footer"));
-
 const App: React.FC = (): JSX.Element => (
   <>
     <GlobalProvider>

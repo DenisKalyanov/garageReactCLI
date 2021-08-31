@@ -7,9 +7,13 @@
 body{
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
 }
 html{
   min-height: -webkit-fill-available;
+  scroll-behavior: smooth;
 }
 html,
 body,

@@ -11,3 +11,13 @@ body {
   width: 100%;
   min-width: 320px;
 }
+
+.common__top-margin__wrapper{
+  position: relative;
+}
+
+.common__top-margin{
+  height: 80px;
+  position: absolute;
+  top: -65px;
+}

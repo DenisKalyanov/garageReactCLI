@@ -1,4 +1,3 @@
-import React from "react";
 import "../../styles/molecules/Bonus.scss";
 import Kit from "../../assets/images/kit.png";
 
@@ -13,7 +12,8 @@ const Bonus: React.FC = (): JSX.Element => {
   ];
 
   return (
-    <section className="bonus common-margin">
+    <section className="bonus common-margin common__top-margin__wrapper">
+      <div id="bonus" className="common__top-margin" />
       <h2 className="common-title">
         <span className="orange-letter">П</span>риятные бонусы
       </h2>

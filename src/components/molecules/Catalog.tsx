@@ -1,15 +1,15 @@
-import React, { useState, Suspense } from "react";
+import { useState, Suspense, lazy } from "react";
 import Slider from "react-slick";
 import Lift1 from "../../assets/images/lift1.png";
 import Pneumo from "../../assets/images/pneumo.png";
 import Kit from "../../assets/images/kit.png";
 
-const CatalogItem = React.lazy(() => import("./CatalogItem"));
+const CatalogItem = lazy(() => import("./CatalogItem"));
 
 const catalogItems = [
-  { title: "Подъемники", section: "lifts" },
-  { title: "Пневмоинструмент", section: "pneumatics" },
-  { title: "Инструмент", section: "tools" },
+  { id: 1, title: "Подъемники", section: "lifts" },
+  { id: 2, title: "Пневмоинструмент", section: "pneumatics" },
+  { id: 3, title: "Инструмент", section: "tools" },
 ];
 
 const list = {
@@ -113,6 +113,7 @@ const list = {
 
 const Catalog = (): JSX.Element => {
   const [currentList, setCurrentList] = useState(list.lifts);
+  const [isActive, setIsActive] = useState(1);
 
   const settings = {
     dots: false,
@@ -124,8 +125,9 @@ const Catalog = (): JSX.Element => {
     swipeToSlide: true,
   };
 
-  const changeCurrentItem = (item: string) => {
-    switch (item) {
+  const changeCurrentItem = (item: any) => {
+    setIsActive(item.id)
+     switch (item.section) {
       case "lifts":
         setCurrentList(list.lifts);
         break;
@@ -150,14 +152,14 @@ const Catalog = (): JSX.Element => {
         {catalogItems.map(
           (item): JSX.Element => (
             <div
-              key={item.title}
+              key={item.id}
               className="main-catalog__menu__wrapper"
               aria-hidden="false"
             >
               <button
                 type="button"
-                className="main-catalog__menu"
-                onClick={() => changeCurrentItem(item.section)}
+                className={`main-catalog__menu ${isActive===item.id ? "main-catalog__menu__active" : null}`}
+                onClick={() => changeCurrentItem(item)}
                 aria-label={item.title}
                 aria-hidden="false"
               >

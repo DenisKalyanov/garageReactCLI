@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 import loadable from "@loadable/component";
 
@@ -12,12 +11,11 @@ const Bonus = loadable(() => import("../molecules/Bonus"));
 const Map = loadable(() => import("../molecules/Map"));
 
 const menuItems = [
-  { title: "Галерея", link: "#header", section: "gallery" },
-  { title: "Как проехать", link: "", section: "path" },
-  { title: "Расчет стоимости", link: "", section: "price" },
-  { title: "Расточка дисков", link: "", section: "sharpen" },
-  { title: "Контакты", link: "", section: "contacts" },
-  { title: "ПРивет я ОЛЕХ", link: "", section: "some" },
+  { title: "Галерея", link: "header", section: "gallery" },
+  { title: "Цены", link: "price", section: "price" },
+  { title: "Бонусы", link: "bonus", section: "sharpen" },
+  { title: "Как проехать", link: "map", section: "path" },
+  { title: "Контакты", link: "contacts", section: "contacts" },
 ];
 
 const Main = (): JSX.Element => {
@@ -37,13 +35,14 @@ const Main = (): JSX.Element => {
         <Slider {...settings}>
           {menuItems.map(
             (item): JSX.Element => (
-              <p
+              <a
+                href={`#${item.link}`}
                 key={item.title}
                 className="main-nav__item"
                 aria-hidden="false"
               >
                 {item.title}
-              </p>
+              </a>
             )
           )}
         </Slider>

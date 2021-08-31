@@ -1,11 +1,11 @@
-import React, { useContext, useRef, Suspense } from "react";
+import { useContext, useRef, Suspense, lazy } from "react";
 import "../../styles/organisms/Header.scss";
 import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 import { GlobalContext, InitialState } from "../../store/state";
 import Phone from "../../assets/svg/phone.svg";
 import BurgerMenuButton from "../../assets/svg/burger-menu.svg";
 
-const BurgerMenu = React.lazy(() => import("../molecules/BurgerMenu"));
+const BurgerMenu = lazy(() => import("../molecules/BurgerMenu"));
 
 const Header: React.FC = (): JSX.Element => {
   const {

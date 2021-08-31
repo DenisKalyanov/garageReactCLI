@@ -24,3 +24,8 @@ yarn-error.log*
 
 config
 /config
+
+.firebaserc
+farebase.json
+.firebase
+/.firebase

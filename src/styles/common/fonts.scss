@@ -22,15 +22,23 @@
 
 @mixin title {
   font-family: "Arial Black", arial;
-  font-style: bold;
+  font-weight: 800;
   font-size: 1.5rem;
   line-height: 2.375rem;
 }
 
 @mixin subTitle {
   font-family: "Arial Black", arial;
-  font-style: bold;
+  font-weight: 800;
   font-size: 1rem;
+}
+
+@mixin linkBurgerMenu {
+  font-family: "Arial Black", arial;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 2.375rem;
 }
 
 @mixin description {
@@ -38,14 +46,6 @@
   font-weight: 400;
   font-style: italic;
   font-size: 16px;
-}
-
-@mixin linkBurgerMenu {
-  font-family: "Arial Black", arial;
-  font-weight: 100;
-  font-style: normal;
-  font-size: 28px;
-  line-height: 2.375rem;
 }
 
 @mixin contacts {

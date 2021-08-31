@@ -10,17 +10,25 @@
   .bonus__wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin-top: 10px;
+    justify-content: space-between;
+    @include middleMobile {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
     .bonus__item {
       padding: 5px;
       background-color: $realWhite;
-      width: 49%;
+      width: 32%;
       margin-bottom: 7px;
       border-radius: 10px;
       min-height: 50px;
       display: flex;
       align-items: center;
+      @include tablet {
+        width: 48%;
+        min-height: 30px;
+      }
       @include middleMobile {
         width: 100%;
         min-height: 30px;
@@ -38,7 +46,13 @@
         width: 77%;
         word-wrap: break-word;
         @include time;
-        font-size: 14px;
+        font-size: 19px;
+        @include tablet {
+          font-size: 17px;
+        }
+        @include mobile {
+          font-size: 13px;
+        }
         @include middleMobile {
           font-size: 16px;
         }
