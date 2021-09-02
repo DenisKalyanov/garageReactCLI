@@ -5,7 +5,7 @@ import Vk from "../../assets/svg/vk.svg";
 import "../../styles/organisms/Footer.scss";
 
 const Footer = (): JSX.Element => (
-  <footer className="footer">
+<footer className="footer content">
     <div className="footer__social">
       <p className="footer__social__title">Мы в соц. сетях:</p>
       <div className="footer__buttons">
@@ -22,7 +22,7 @@ const Footer = (): JSX.Element => (
         garage@mail.ru
       </a>
     </div>
-  </footer>
+  </footer>  
 );
 
 export default Footer;

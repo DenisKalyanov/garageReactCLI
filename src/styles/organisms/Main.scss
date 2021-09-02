@@ -4,11 +4,12 @@
 @import "../common/common.scss";
 
 .main {
-  margin-top: 70px;
+  margin-top: 65px;
   .about-me__wrapper {
     background-color: $realWhite;
     padding: 10px;
     border-radius: 10px;
+    position: relative;
     margin-right: 20px;
     .subtitle {
       @include subTitle;
@@ -17,6 +18,22 @@
     .description {
       @include description;
       color: $lightGrey;
+    }
+    .about-me__car {
+      display: none;
+      @include mobile {
+        display: inline;
+        position: absolute;
+        transition: all 1.2s ease-in;
+        top: -35px;
+        right: 10px;
+        width: 100px;
+      }
+    }
+    .about-me__car__click {
+      @include mobile {
+        right: 110%;
+      }
     }
   }
 
@@ -102,8 +119,14 @@
 }
 
 .main-nav__wrapper {
-  background-color: $realWhite;
-  border-radius: 20px 0 0 20px;
+  background-color: rgba(255, 255, 255, 0.74);
+  border-radius: 15px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  @include tablet {
+    display: none;
+  }
   .main-nav__item {
     padding: 0 20px;
     @include scrollMenu;
@@ -115,4 +138,12 @@
 .common-title {
   @include title;
   color: $grey;
+  margin: 20px 0 10px 20px;
+  @include tablet {
+    margin: 10px;
+    margin-bottom: 5px;
+  }
+  @include mobile {
+    margin: 5px 0 3px 0;
+  }
 }

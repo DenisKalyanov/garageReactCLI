@@ -1,11 +1,13 @@
-import Slider from "react-slick";
 import loadable from "@loadable/component";
 import { HashLink as Link } from "react-router-hash-link";
+
+import FastCar from "../../assets/images/fastCar.png";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../styles/organisms/Main.scss";
 import { menuItems } from "../../static/menuItems";
+import { useEffect, useState } from "react";
 
 const Catalog = loadable(() => import("../molecules/Catalog"));
 const Price = loadable(() => import("../molecules/Price"));
@@ -13,20 +15,17 @@ const Bonus = loadable(() => import("../molecules/Bonus"));
 const Map = loadable(() => import("../molecules/Map"));
 
 const Main = (): JSX.Element => {
-  const settings = {
-    dots: false,
-    speed: 500,
-    className: "slider variable-width",
-    variableWidth: true,
-    infinite: false,
-    swipeToSlide: true,
-    arrows: false,
-  };
 
+  const [isClick, setClick] = useState(false);
+  const onClick = () =>{
+    setClick(true);
+  }
+
+  useEffect(() => {
+  }, [isClick])
   return (
     <main className="main">
-      <div className="main-nav__wrapper common-margin">
-        <Slider {...settings}>
+      <div className="main-nav__wrapper">
           {menuItems.map(
             (item): JSX.Element => (
               <Link
@@ -39,7 +38,6 @@ const Main = (): JSX.Element => {
               </Link>
             )
           )}
-        </Slider>
       </div>
       <section className="common-margin">
         <h2 className="common-title">
@@ -53,6 +51,7 @@ const Main = (): JSX.Element => {
             doloribus ducimus unde autem inventore molestiae reprehenderit
             doloremque voluptatem a ex eligendi.
           </p>
+          <img onClick={onClick} src={FastCar} alt="" className={`about-me__car ${isClick ? "about-me__car__click" : null}`}/>
         </div>
       </section>
       <Catalog />

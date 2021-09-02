@@ -2,30 +2,46 @@
 @import "../common/fonts.scss";
 @import "../common/colors.scss";
 
-
-.header-wrapper{
+.header-wrapper {
   background-color: $backgroundBlueTransparent;
-margin: 0 auto;
-position: fixed;
-left: 0;
-top: 0;
-z-index: 1;
-width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
   .header {
-
     max-width: 1440px;
     display: flex;
     justify-content: space-between;
-    padding: 20px 15px 10px;
+    padding: 15px 20px 10px;
     background-repeat: repeat-y;
-  
     align-items: center;
+    @include mobile {
+      padding: 13px 15px 8px;
+    }
+
+    .header-title {
+      @include title;
+      color: $grey;
+      @include mobile {
+        font-size: 25px;
+      }
+    }
     .header__time {
       text-align: center;
       @include time;
-      color: $lightGrey;
+      color: $grey;
+      display: flex;
+      @include mobile {
+        color: $lightGrey;
+        flex-direction: column;
+        .header__time__space {
+          display: none;
+        }
+      }
     }
-  
+
     .header__phone__link {
       display: none;
       @include tablet {
@@ -41,10 +57,11 @@ width: 100%;
         color: $realWhite;
       }
     }
-  
+
     .header__phone__link__desktop {
       position: relative;
       @include contacts;
+      font-size: 22px;
       color: $grey;
       &::before {
         content: "";
@@ -60,7 +77,7 @@ width: 100%;
         display: none;
       }
     }
-  
+
     .burger-menu__background {
       position: absolute;
       left: 0;

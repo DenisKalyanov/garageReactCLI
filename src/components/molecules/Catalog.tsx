@@ -17,6 +17,7 @@ const Catalog = (): JSX.Element => {
     infinite: false,
     arrows: false,
     swipeToSlide: true,
+    focusOnSelect: true,
   };
 
   const changeCurrentItem = (item: any) => {

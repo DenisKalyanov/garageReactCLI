@@ -15,6 +15,7 @@ const CatalogItem: React.FC<Props> = (props): JSX.Element => {
     infinite: false,
     arrows: false,
     swipeToSlide: true,
+    focusOnSelect: true,
   };
 
   return (
