@@ -1,118 +1,12 @@
-import { useState, Suspense, lazy } from "react";
+import { useState, lazy, Suspense } from "react";
 import Slider from "react-slick";
-import Lift1 from "../../assets/images/lift1.png";
-import Pneumo from "../../assets/images/pneumo.png";
-import Kit from "../../assets/images/kit.png";
-
+import { Switch, Route, Link } from "react-router-dom";
+import { catalogItems, catalogList } from "../../static/catalog";
 const CatalogItem = lazy(() => import("./CatalogItem"));
 
-const catalogItems = [
-  { id: 1, title: "Подъемники", section: "lifts" },
-  { id: 2, title: "Пневмоинструмент", section: "pneumatics" },
-  { id: 3, title: "Инструмент", section: "tools" },
-];
-
-const list = {
-  lifts: [
-    {
-      title: "Force 1",
-      description: {
-        firstTitle: "Подъем",
-        firstDescription: "4 тонны",
-        secondTitle: "Высота подъема",
-        secondDescription: "1780мм",
-      },
-      image: Lift1,
-    },
-    {
-      title: "Force 2",
-      description: {
-        firstTitle: "Подъем",
-        firstDescription: "3 тонны",
-        secondTitle: "Высота подъема",
-        secondDescription: "1880мм",
-      },
-      image: Lift1,
-    },
-    {
-      title: "Force 3",
-      description: {
-        firstTitle: "Подъем",
-        firstDescription: "5 тонн",
-        secondTitle: "Высота подъема",
-        secondDescription: "1400мм",
-      },
-      image: Lift1,
-    },
-  ],
-  pneumatic: [
-    {
-      title: "Pneumatic 1",
-      description: {
-        firstTitle: "Мощность",
-        firstDescription: "700Н",
-        secondTitle: "Вес",
-        secondDescription: "2кг",
-      },
-      image: Pneumo,
-    },
-    {
-      title: "Pneumatic 2",
-      description: {
-        firstTitle: "Мощность",
-        firstDescription: "700Н",
-        secondTitle: "Вес",
-        secondDescription: "2кг",
-      },
-      image: Pneumo,
-    },
-    {
-      title: "Pneumatic 3",
-      description: {
-        firstTitle: "Мощность",
-        firstDescription: "700Н",
-        secondTitle: "Вес",
-        secondDescription: "2кг",
-      },
-      image: Pneumo,
-    },
-  ],
-  tools: [
-    {
-      title: "Tool 1",
-      description: {
-        firstTitle: "Комплект",
-        firstDescription: "100 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
-      },
-      image: Kit,
-    },
-    {
-      title: "Tool 2",
-      description: {
-        firstTitle: "Комплект",
-        firstDescription: "70 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Нет",
-      },
-      image: Kit,
-    },
-    {
-      title: "Tool 3",
-      description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
-      },
-      image: Kit,
-    },
-  ],
-};
-
 const Catalog = (): JSX.Element => {
-  const [currentList, setCurrentList] = useState(list.lifts);
+  const [currentList, setCurrentList] = useState(catalogList.lifts);
+  const [currentItem, setCurrentItem] = useState(catalogItems[0].section);
   const [isActive, setIsActive] = useState(1);
 
   const settings = {
@@ -126,19 +20,20 @@ const Catalog = (): JSX.Element => {
   };
 
   const changeCurrentItem = (item: any) => {
-    setIsActive(item.id)
-     switch (item.section) {
+    setIsActive(item.id);
+    setCurrentItem(item.section);
+    switch (item.section) {
       case "lifts":
-        setCurrentList(list.lifts);
+        setCurrentList(catalogList.lifts);
         break;
       case "pneumatics":
-        setCurrentList(list.pneumatic);
+        setCurrentList(catalogList.pneumatic);
         break;
       case "tools":
-        setCurrentList(list.tools);
+        setCurrentList(catalogList.tools);
         break;
       default:
-        setCurrentList(list.lifts);
+        setCurrentList(catalogList.lifts);
         break;
     }
   };
@@ -156,22 +51,28 @@ const Catalog = (): JSX.Element => {
               className="main-catalog__menu__wrapper"
               aria-hidden="false"
             >
-              <button
+              <Link
+                to={`/${item.section}`}
                 type="button"
-                className={`main-catalog__menu ${isActive===item.id ? "main-catalog__menu__active" : null}`}
+                className={`main-catalog__menu ${
+                  isActive === item.id ? "main-catalog__menu__active" : null
+                }`}
                 onClick={() => changeCurrentItem(item)}
                 aria-label={item.title}
-                aria-hidden="false"
               >
                 {item.title}
-              </button>
+              </Link>
             </div>
           )
         )}
       </Slider>
-      <Suspense fallback={<p>Загрузка каталога...</p>}>
-        <CatalogItem currentList={currentList} />
-      </Suspense>
+      <Switch>
+        <Route path={`/${currentItem}`}>
+          <Suspense fallback={<p>Загрузка каталога...</p>}>
+            <CatalogItem currentList={currentList} />
+          </Suspense>
+        </Route>
+      </Switch>
     </section>
   );
 };

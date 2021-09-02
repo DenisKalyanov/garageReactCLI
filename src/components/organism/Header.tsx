@@ -8,6 +8,7 @@ import BurgerMenuButton from "../../assets/svg/burger-menu.svg";
 const BurgerMenu = lazy(() => import("../molecules/BurgerMenu"));
 
 const Header: React.FC = (): JSX.Element => {
+
   const {
     state,
     changeVisibleBurgerMenu,
@@ -21,7 +22,9 @@ const Header: React.FC = (): JSX.Element => {
   useOnClickOutside(ref, () => changeVisibleBurgerMenu(false));
 
   return (
-    <header className="header">
+    <header className="header-wrapper" id="header">
+      <div className="content header">
+
       <h2 className="common-title">
         <span className="orange-letter">G</span>
         ARAGE
@@ -39,6 +42,9 @@ const Header: React.FC = (): JSX.Element => {
           className="header__phone"
         />
       </a>
+      <a href="tel:+375(33)699-86-04" className="header__phone__link__desktop">
+        +375(33)699-86-04
+      </a>
       <img
         src={BurgerMenuButton}
         onClick={() => changeVisibleBurgerMenu(true)}
@@ -55,6 +61,9 @@ const Header: React.FC = (): JSX.Element => {
           </div>
         )}
       </Suspense>
+
+      </div>
+      
     </header>
   );
 };

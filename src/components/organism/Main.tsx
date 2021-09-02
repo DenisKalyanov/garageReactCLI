@@ -1,22 +1,16 @@
 import Slider from "react-slick";
 import loadable from "@loadable/component";
+import { HashLink as Link } from "react-router-hash-link";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../styles/organisms/Main.scss";
+import { menuItems } from "../../static/menuItems";
 
 const Catalog = loadable(() => import("../molecules/Catalog"));
 const Price = loadable(() => import("../molecules/Price"));
 const Bonus = loadable(() => import("../molecules/Bonus"));
 const Map = loadable(() => import("../molecules/Map"));
-
-const menuItems = [
-  { title: "Галерея", link: "header", section: "gallery" },
-  { title: "Цены", link: "price", section: "price" },
-  { title: "Бонусы", link: "bonus", section: "sharpen" },
-  { title: "Как проехать", link: "map", section: "path" },
-  { title: "Контакты", link: "contacts", section: "contacts" },
-];
 
 const Main = (): JSX.Element => {
   const settings = {
@@ -35,14 +29,14 @@ const Main = (): JSX.Element => {
         <Slider {...settings}>
           {menuItems.map(
             (item): JSX.Element => (
-              <a
-                href={`#${item.link}`}
+              <Link
+                to={`/#${item.link}`}
                 key={item.title}
                 className="main-nav__item"
                 aria-hidden="false"
               >
                 {item.title}
-              </a>
+              </Link>
             )
           )}
         </Slider>

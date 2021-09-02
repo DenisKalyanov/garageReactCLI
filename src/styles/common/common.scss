@@ -10,4 +10,8 @@
   margin: 15px 0 15px 20px;
 }
 
-
+@mixin common-shadow{
+  -webkit-box-shadow: 3px 3px 8px -3px rgba(8, 28, 43, 0.2);
+  -moz-box-shadow: 3px 3px 8px -3px rgba(8, 28, 43, 0.2);
+  box-shadow: 3px 3px 8px -3px rgba(8, 28, 43, 0.2);
+}

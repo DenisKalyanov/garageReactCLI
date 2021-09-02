@@ -1,17 +1,16 @@
 import "../../styles/molecules/Bonus.scss";
 import Kit from "../../assets/images/kit.png";
 
-const Bonus: React.FC = (): JSX.Element => {
-  const bonuses = [
-    { title: "Набор предохранителей", img: Kit },
-    { title: "Перчатки", img: Kit },
-    { title: "Термоусадка", img: Kit },
-    { title: "Наконечник ПВТ", img: Kit },
-    { title: 'Табичка: "мешает машина" ', img: Kit },
-    { title: "Изолента", img: Kit },
-  ];
+const bonuses = [
+  { title: "Набор предохранителей", img: Kit },
+  { title: "Перчатки", img: Kit },
+  { title: "Термоусадка", img: Kit },
+  { title: "Наконечник ПВТ", img: Kit },
+  { title: 'Табичка: "мешает машина" ', img: Kit },
+  { title: "Изолента", img: Kit },
+];
 
-  return (
+const Bonus: React.FC = () => (
     <section className="bonus common-margin common__top-margin__wrapper">
       <div id="bonus" className="common__top-margin" />
       <h2 className="common-title">
@@ -37,6 +36,5 @@ const Bonus: React.FC = (): JSX.Element => {
       </div>
     </section>
   );
-};
 
 export default Bonus;

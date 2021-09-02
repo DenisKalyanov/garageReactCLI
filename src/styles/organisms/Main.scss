@@ -1,6 +1,7 @@
 @import "../common/breakpoints.scss";
 @import "../common/fonts.scss";
 @import "../common/colors.scss";
+@import "../common/common.scss";
 
 .main {
   margin-top: 70px;
@@ -26,8 +27,7 @@
     outline: none;
     .main-catalog__menu {
       display: block;
-      @include linkBurgerMenu;
-      font-size: 20px;
+      @include scrollMenu;
       background-color: $backgroundMenuLightBlue;
       color: $grey;
       padding: 0 20px;
@@ -36,9 +36,8 @@
       outline: none;
     }
     .main-catalog__menu__active {
-        color: inherit;
-        background-color: $realWhite;
-
+      color: inherit;
+      background-color: $realWhite;
     }
   }
 
@@ -54,6 +53,8 @@
       border-radius: 10px;
       max-width: 270px;
       padding: 10px 10px 10px 20px;
+      margin: 5px 5px 8px 0;
+      @include common-shadow;
       @include mobile {
         width: 70vw;
       }
@@ -105,8 +106,7 @@
   border-radius: 20px 0 0 20px;
   .main-nav__item {
     padding: 0 20px;
-    @include linkBurgerMenu;
-    font-size: 20px;
+    @include scrollMenu;
     border: none;
     outline: none;
   }

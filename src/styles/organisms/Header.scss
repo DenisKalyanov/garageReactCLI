@@ -2,48 +2,79 @@
 @import "../common/fonts.scss";
 @import "../common/colors.scss";
 
-.header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 15px 10px;
-  background-repeat: repeat-y;
+
+.header-wrapper{
   background-color: $backgroundBlueTransparent;
+margin: 0 auto;
+position: fixed;
+left: 0;
+top: 0;
+z-index: 1;
+width: 100%;
+  .header {
 
-  align-items: center;
-  .header__time {
-    text-align: center;
-    @include time;
-    color: $lightGrey;
-  }
-
-  .header__phone__link {
+    max-width: 1440px;
     display: flex;
+    justify-content: space-between;
+    padding: 20px 15px 10px;
+    background-repeat: repeat-y;
+  
     align-items: center;
-
-    .header__phone {
-      font-size: 20px;
-      border: none;
-      width: 35px;
-      height: 35px;
-      background-color: transparent;
-      color: $realWhite;
+    .header__time {
+      text-align: center;
+      @include time;
+      color: $lightGrey;
     }
-  }
-
-  .burger-menu__background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: $backgroundGreyTransparent;
-  }
-  .header__burger-menu {
-    width: 40px;
+  
+    .header__phone__link {
+      display: none;
+      @include tablet {
+        display: flex;
+        align-items: center;
+      }
+      .header__phone {
+        font-size: 20px;
+        border: none;
+        width: 35px;
+        height: 35px;
+        background-color: transparent;
+        color: $realWhite;
+      }
+    }
+  
+    .header__phone__link__desktop {
+      position: relative;
+      @include contacts;
+      color: $grey;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -25px;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        // background-image: url(../../assets/phone.svg);
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+  
+    .burger-menu__background {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: $backgroundGreyTransparent;
+    }
+    .header__burger-menu {
+      width: 40px;
+      display: none;
+      @include tablet {
+        display: block;
+      }
+    }
   }
 }
