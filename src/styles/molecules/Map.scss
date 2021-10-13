@@ -16,6 +16,9 @@
   }
   .map__tittle {
     margin-left: 40px;
+    @include mobile {
+      margin-left: 20px;
+    }
   }
   .map__description {
     @include time;

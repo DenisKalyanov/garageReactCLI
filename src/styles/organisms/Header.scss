@@ -30,14 +30,30 @@
     }
     .header__time {
       text-align: center;
-      @include time;
+      @include contactTitle;
       color: $grey;
       display: flex;
       @include mobile {
-        color: $lightGrey;
+        color: $grey;
         flex-direction: column;
         .header__time__space {
           display: none;
+        }
+      }
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -40px;
+        background-image: url(../../assets/svg/clock.svg);
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 35px;
+      }
+      @include tablet {
+        &::before {
+          background-image: none;
         }
       }
     }
@@ -60,18 +76,17 @@
 
     .header__phone__link__desktop {
       position: relative;
-      @include contacts;
-      font-size: 22px;
+      @include contactTitle;
       color: $grey;
       &::before {
         content: "";
         position: absolute;
-        top: -2px;
-        left: -25px;
+        top: -4px;
+        left: -40px;
+        background-image: url(../../assets/svg/phone.svg);
         background-repeat: no-repeat;
-        width: 20px;
-        height: 20px;
-        // background-image: url(../../assets/phone.svg);
+        width: 35px;
+        height: 35px;
       }
       @include tablet {
         display: none;

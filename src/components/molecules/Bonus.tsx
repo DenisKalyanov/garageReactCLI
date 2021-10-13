@@ -6,7 +6,7 @@ const bonuses = [
   { title: "Перчатки", img: Kit },
   { title: "Термоусадка", img: Kit },
   { title: "Наконечник ПВТ", img: Kit },
-  { title: 'Табичка: "мешает машина" ', img: Kit },
+  { title: 'Табличка: "мешает машина" ', img: Kit },
   { title: "Изолента", img: Kit },
 ];
 

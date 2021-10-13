@@ -5,7 +5,7 @@
 @mixin svgBeforePosition {
   content: "";
   position: absolute;
-  top: -2px;
+  top: 1px;
   left: -25px;
   background-repeat: no-repeat;
   width: 20px;
@@ -38,25 +38,32 @@
     align-items: center;
     .common-title {
       @include title;
-      color: $lightGrey;
+      color: $grey;
+    }
+    .burger-menu__close{
+      width: 40px;
     }
   }
 
   .burger-menu__time {
-    @include title;
-    color: $lightGrey;
+    @include time;
+    color: $grey;
     font-size: 14px;
     line-height: normal;
   }
 
-  .burger-menu__button {
-    font-size: 20px;
-    border: none;
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    color: $realWhite;
-    margin-right: 20px;
+  .burger-menu__buttons{
+    display: flex;
+    justify-content: space-between;
+    .burger-menu__button {
+      font-size: 20px;
+      border: none;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      color: $realWhite;
+      margin-right: 20px;
+    }
   }
 
   .burger-menu__main-wrapper {
@@ -94,20 +101,23 @@
         margin-bottom: 15px;
         position: relative;
         @include contacts;
-        color: $grey;
+        margin-left: 25px;
+        color: $grey;        
         &::before {
           @include svgBeforePosition;
-          // background-image: url(../../assets/phone.svg);
+          background-image: url(../../assets/svg/telephone.svg);
         }
       }
       .burger-menu__email {
         position: relative;
         margin-bottom: 15px;
+        margin-left: 25px;
         @include contacts;
         color: $grey;
         &::before {
           @include svgBeforePosition;
-          // background-image: url(../../assets/cashback.svg);
+          top: 3px;
+          background-image: url(../../assets/svg/mail.svg);
         }
       }
     }

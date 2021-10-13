@@ -39,7 +39,8 @@ const BurgerMenu = (): JSX.Element => {
         </div>
         <img
           src={Close}
-          alt=""
+          alt="Закрыть модальное окно"
+          className="burger-menu__close"
           onClick={() => changeVisibleBurgerMenu(false)}
         />
       </div>
@@ -58,7 +59,7 @@ const BurgerMenu = (): JSX.Element => {
           <a href="mailto:garage@mail.ru" className="burger-menu__email">
             garage@mail.ru
           </a>
-          <div>
+          <div className="burger-menu__buttons">
             <img src={Instagram} alt="" className="burger-menu__button" />
             <img src={Viber} alt="" className="burger-menu__button" />
             <img src={Vk} alt="" className="burger-menu__button" />

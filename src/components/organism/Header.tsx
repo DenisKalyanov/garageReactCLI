@@ -53,7 +53,7 @@ const Header: React.FC = (): JSX.Element => {
           alt="Открыть меню"
           role="button"
         />
-        <Suspense fallback={<p>Загрузка меню...</p>}>
+        <Suspense fallback={null}>
           {visible && (
             <div className="burger-menu__background">
               <div ref={ref}>

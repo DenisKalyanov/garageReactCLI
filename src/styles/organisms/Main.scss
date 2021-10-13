@@ -17,7 +17,7 @@
     }
     .description {
       @include description;
-      color: $lightGrey;
+      color: $grey;
     }
     .about-me__car {
       display: none;
@@ -47,8 +47,11 @@
       @include scrollMenu;
       background-color: $backgroundMenuLightBlue;
       color: $grey;
-      padding: 0 20px;
-      border-radius: 20px;
+      padding: 8px 20px;
+      @include tablet {
+        padding: 0px 20px;
+      }
+      border-radius: 28px;
       border: none;
       outline: none;
     }
@@ -68,11 +71,16 @@
       flex-direction: column;
       background-color: $realWhite;
       border-radius: 10px;
-      max-width: 270px;
+      max-width: 500px;
+      width: 50vw;
       padding: 10px 10px 10px 20px;
       margin: 5px 5px 8px 0;
       @include common-shadow;
+      @include tablet {
+        width: 65vw;
+      }
       @include mobile {
+        max-width: 270px;
         width: 70vw;
       }
       .main-catalog__item__header {
@@ -100,17 +108,12 @@
         .main-catalog__item__description {
           margin: 0 10px;
           .main-catalog__item__description__title {
-            @include catalogTitle;
-            font-size: 18px;
+            @include catalogSubTitle;
             margin-top: 10px;
             margin-bottom: 4px;
-            @include littleMobile {
-              font-size: 14px;
-            }
           }
           .main-catalog__item__description__description {
-            @include catalogTitle;
-            font-weight: 400;
+            @include catalogDescription;
           }
         }
       }
@@ -138,7 +141,7 @@
 .common-title {
   @include title;
   color: $grey;
-  margin: 20px 0 10px 20px;
+  margin: 40px 0 20px 20px;
   @include tablet {
     margin: 10px;
     margin-bottom: 5px;

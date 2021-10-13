@@ -29,3 +29,5 @@ config
 farebase.json
 .firebase
 /.firebase
+
+js.js
