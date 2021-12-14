@@ -5,7 +5,7 @@ import { catalogItems, catalogList } from "../../static/catalog";
 const CatalogItem = lazy(() => import("./CatalogItem"));
 
 const Catalog = (): JSX.Element => {
-  const [currentList, setCurrentList] = useState(catalogList.lifts);
+  const [currentList, setCurrentList] = useState(catalogList.basic);
   const [currentItem, setCurrentItem] = useState(catalogItems[0].section);
   const [isActive, setIsActive] = useState(1);
 
@@ -23,20 +23,7 @@ const Catalog = (): JSX.Element => {
   const changeCurrentItem = (item: any) => {
     setIsActive(item.id);
     setCurrentItem(item.section);
-    switch (item.section) {
-      case "lifts":
-        setCurrentList(catalogList.lifts);
-        break;
-      case "pneumatics":
-        setCurrentList(catalogList.pneumatic);
-        break;
-      case "tools":
-        setCurrentList(catalogList.tools);
-        break;
-      default:
-        setCurrentList(catalogList.lifts);
-        break;
-    }
+    catalogList[item.section] ? setCurrentList(catalogList[item.section]) : setCurrentList(catalogList.basic);
   };
 
   return (
@@ -47,20 +34,8 @@ const Catalog = (): JSX.Element => {
       <Slider {...settings}>
         {catalogItems.map(
           (item): JSX.Element => (
-            <div
-              key={item.id}
-              className="main-catalog__menu__wrapper"
-              aria-hidden="false"
-            >
-              <Link
-                to={`/${item.section}`}
-                type="button"
-                className={`main-catalog__menu ${
-                  isActive === item.id ? "main-catalog__menu__active" : null
-                }`}
-                onClick={() => changeCurrentItem(item)}
-                aria-label={item.title}
-              >
+            <div key={item.id} className="main-catalog__menu__wrapper" aria-hidden="false">
+              <Link to={`/${item.section}`} type="button" className={`main-catalog__menu ${isActive === item.id ? "main-catalog__menu__active" : null}`} onClick={() => changeCurrentItem(item)} aria-label={item.title}>
                 {item.title}
               </Link>
             </div>

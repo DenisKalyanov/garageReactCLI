@@ -1,5 +1,5 @@
 import "../../styles/molecules/Bonus.scss";
-import Kit from "../../assets/images/kit.png";
+import Kit from "../../assets/images/catalog/basic/YT-38791.png";
 
 const bonuses = [
   { title: "Набор предохранителей", img: Kit },
