@@ -7,14 +7,14 @@ const Map: React.FC<any> = () => (
     <h2 className="common-title map__tittle">
       <span className="orange-letter">М</span>ы находимся
     </h2>
-    <p className="map__description">г. Брест, ул. Янки Купалы 100500</p>
+    <p className="map__description">г. Брест, ул. Янки Купалы 102Бк94</p>
     <div className="map_wrapper__content">
       <img src={Build} alt="" className="map__image" />
       <iframe
         title="Карта проезда"
         className="map__import"
         loading="lazy"
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A1234ed107980401397621136bdd922696c516cedb8b9c0be4eb44cd8afba7f15&amp;source=constructor"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A2d35bf06d509ed2861cc9fdf75370d06c54e552e10983d862fe45a05337d1c7f&amp;source=constructor"
       />
     </div>
   </section>

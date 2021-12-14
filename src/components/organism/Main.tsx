@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../../styles/organisms/Main.scss";
 import { menuItems } from "../../static/menuItems";
 import { useEffect, useState } from "react";
+import PriceDesctop from "../molecules/PriceDesctop";
 
 const Catalog = loadable(() => import("../molecules/Catalog"));
 const Price = loadable(() => import("../molecules/Price"));
@@ -15,29 +16,27 @@ const Bonus = loadable(() => import("../molecules/Bonus"));
 const Map = loadable(() => import("../molecules/Map"));
 
 const Main = (): JSX.Element => {
-
   const [isClick, setClick] = useState(false);
-  const onClick = () =>{
+  const onClick = () => {
     setClick(true);
-  }
+  };
 
-  useEffect(() => {
-  }, [isClick])
+  useEffect(() => {}, [isClick]);
   return (
     <main className="main">
       <div className="main-nav__wrapper">
-          {menuItems.map(
-            (item): JSX.Element => (
-              <Link
-                to={`/#${item.link}`}
-                key={item.title}
-                className="main-nav__item"
-                aria-hidden="false"
-              >
-                {item.title}
-              </Link>
-            )
-          )}
+        {menuItems.map(
+          (item): JSX.Element => (
+            <Link
+              to={`/#${item.link}`}
+              key={item.title}
+              className="main-nav__item"
+              aria-hidden="false"
+            >
+              {item.title}
+            </Link>
+          )
+        )}
       </div>
       <section className="common-margin">
         <h2 className="common-title">
@@ -46,16 +45,24 @@ const Main = (): JSX.Element => {
         <div className="about-me__wrapper">
           <h3 className="subtitle">Аренда</h3>
           <p className="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-            libero. Animi corrupti est, id porro ullam similique beatae
-            doloribus ducimus unde autem inventore molestiae reprehenderit
-            doloremque voluptatem a ex eligendi.
+            GARAGE на час - это место, где ВЫ сами сможете самостоятельно
+            обслужить свою машину и будете уверены что все работы выполнены
+            качественно. <br/>Мы предоставляем Вам хороший инструмент в
+            помещении, которое оборудовано двумя подъёмниками и смотровой ямой.
           </p>
-          <img onClick={onClick} src={FastCar} alt="" className={`about-me__car ${isClick ? "about-me__car__click" : null}`}/>
+          <img
+            onClick={onClick}
+            src={FastCar}
+            alt=""
+            className={`about-me__car ${
+              isClick ? "about-me__car__click" : null
+            }`}
+          />
         </div>
       </section>
       <Catalog />
-      <Price />
+      {/* <Price /> */}
+      <PriceDesctop />
       <Bonus />
       <Map />
     </main>

@@ -193,19 +193,43 @@
   }
 }
 
-.price-right__desktop {
-  width: 48%;
-  .price-right__desktop__wrapper {
-    width: 100%;
-    background-color: burlywood;
+.price-content-wrapper__desktop{
+  display: flex;
+  flex-direction: column;
+  .price-content-wrapper-clocks__desktop{
     display: flex;
-    .price-right__desktop__wrapper__left {
-      background-color: rgb(155, 222, 135);
+    justify-content: space-between;
 
-      width: 75%;
-    }
-    .price-right__desktop__wrapper__right {
-      width: 20%;
+    .price-content-clocks-block{
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      background-color: $realWhite;
+      .price-content-clocks-block__sale{
+        background-color: red;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 6px;
+      }
+      .price-content-clocks-block__coast{
+        display: flex;
+        .price-content-clocks-block__coast__time{
+          background-color: $orange;
+          padding: 6px;
+          border-radius: 10px 0 0px 10px;
+          @include subTitle;
+          font-size: 30px;
+          color: $realWhite;
+        }
+        .price-content-clocks-block__coast__money{
+          background-color: $backgroundBlue;
+          padding: 6px;
+          border-radius: 0 10px 10px 0;
+          @include subTitle;
+          font-style: italic;
+          font-size: 30px;
+        }
+      }
     }
   }
 }

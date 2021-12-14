@@ -29,24 +29,6 @@ const Price = (): JSX.Element => (
           <span className="price-template__percent">50%</span>
         </div>
       </div>
-      {/* <div className="price-right__desktop">
-        <div className="price-right__desktop__wrapper">
-          <div className="price-right__desktop__wrapper__left">
-            <div>first_1</div>
-            <div>first_1</div>
-            <div>first_1</div>
-          </div>
-          <div className="price-right__desktop__wrapper__right">first_2</div>
-        </div>
-        <div>
-          <div>second_1</div>
-          <div>second_2</div>
-        </div>
-        <div>
-          <div>third_1</div>
-          <div>third_2</div>
-        </div>
-      </div> */}
       <div className="price-right">
         {priceList.map((items) => (
           <div className="price-right__wrapper" key={items[0].time}>

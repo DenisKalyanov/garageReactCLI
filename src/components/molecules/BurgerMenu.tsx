@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 
 import "../../styles/molecules/BurgerMenu.scss";
 import Close from "../../assets/svg/close.svg";
@@ -8,17 +8,12 @@ import Viber from "../../assets/svg/viber.svg";
 import Vk from "../../assets/svg/vk.svg";
 
 import BurgerMenuLink from "../atoms/BurgerMenuLink";
-import { GlobalContext } from "../../store/state";
 import { links } from "../../static/burgerMenu";
 
-const BurgerMenu = (): JSX.Element => {
-  const {
-    changeVisibleBurgerMenu,
-  }: {
-    changeVisibleBurgerMenu: (value: boolean) => void;
-  } = useContext(GlobalContext);
-
-
+type Props = {
+  changeVisibleBurgerMenu: (arg: boolean) => void;
+}
+const BurgerMenu: React.FC<Props> = ({ changeVisibleBurgerMenu }): JSX.Element => {
   useEffect(() => {
     document.body.style.overflow = "hidden";
 

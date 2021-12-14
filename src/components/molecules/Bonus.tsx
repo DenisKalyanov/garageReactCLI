@@ -17,8 +17,7 @@ const Bonus: React.FC = () => (
         <span className="orange-letter">П</span>риятные бонусы
       </h2>
       <span className="bonus__description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-        perferendis maxime beatae corrupti dignissimos.
+        Для более комфортной работы вы можете пользоваться следующими расходниками:
       </span>
       <div className="bonus__wrapper">
         {bonuses.map((item) => (

@@ -1,21 +1,14 @@
-import { useContext, useRef, Suspense, lazy } from "react";
+import { useRef, Suspense, lazy, useState } from "react";
 import "../../styles/organisms/Header.scss";
 import { useOnClickOutside } from "../../hooks/useOnClickOutside";
-import { GlobalContext, InitialState } from "../../store/state";
 import Phone from "../../assets/svg/phone.svg";
 import BurgerMenuButton from "../../assets/svg/burger-menu.svg";
 
 const BurgerMenu = lazy(() => import("../molecules/BurgerMenu"));
 
 const Header: React.FC = (): JSX.Element => {
-  const {
-    state,
-    changeVisibleBurgerMenu,
-  }: {
-    state: InitialState;
-    changeVisibleBurgerMenu: (value: boolean) => void;
-  } = useContext(GlobalContext);
-  const { visible } = state;
+  const [visible, changeVisibleBurgerMenu] = useState<boolean>(false);
+
   const ref: any = useRef();
 
   useOnClickOutside(ref, () => changeVisibleBurgerMenu(false));
@@ -57,7 +50,7 @@ const Header: React.FC = (): JSX.Element => {
           {visible && (
             <div className="burger-menu__background">
               <div ref={ref}>
-                <BurgerMenu />
+                <BurgerMenu changeVisibleBurgerMenu={changeVisibleBurgerMenu}/>
               </div>
             </div>
           )}
