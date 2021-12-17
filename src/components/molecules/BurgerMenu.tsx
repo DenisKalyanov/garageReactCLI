@@ -48,8 +48,8 @@ const BurgerMenu: React.FC<Props> = ({ changeVisibleBurgerMenu }): JSX.Element =
           </ul>
         </nav>
         <div className="burger-menu_contacts">
-          <a href="tel:+375(33)699-86-04" className="burger-menu__phone">
-            +375(33)999-88-00
+          <a href="tel:+375(33)917-80-41" className="burger-menu__phone">
+            +375(33)917-80-41
           </a>
           <a href="mailto:garage@mail.ru" className="burger-menu__email">
             garage@mail.ru

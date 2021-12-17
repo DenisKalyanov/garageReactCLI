@@ -1,7 +1,24 @@
 @import "../common/breakpoints.scss";
 @import "../common/fonts.scss";
 @import "../common/colors.scss";
+@import "../common/common.scss";
 
+
+.priceVisibleDesktop{
+  display: block;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.priceVisibleMobile{
+  display: none;
+  @include mobile {
+    display: block;
+  }
+
+}
 .price-wrapper {
   display: flex;
   justify-content: space-between;
@@ -193,41 +210,66 @@
   }
 }
 
-.price-content-wrapper__desktop{
+.price-content-wrapper__desktop {
   display: flex;
   flex-direction: column;
-  .price-content-wrapper-clocks__desktop{
+  .price-content-wrapper-clocks__desktop {
     display: flex;
     justify-content: space-between;
 
-    .price-content-clocks-block{
+    .price-content-clocks-block {
       display: flex;
       flex-direction: column;
       width: 30%;
       background-color: $realWhite;
-      .price-content-clocks-block__sale{
+      border-radius: 10px;
+      @include common-shadow;
+      padding: 20px;
+      @include tablet {
+        padding: 10px;
+      }
+      padding-bottom: 0;
+
+      .price-content-clocks-block__sale {
         background-color: red;
         border-radius: 10px;
-        margin: 10px;
+        margin-bottom: 10px;
         padding: 6px;
+        @include PriceFont;
+        color: $realWhite;
+        text-align: center;
+        padding: 14px 8px;
       }
-      .price-content-clocks-block__coast{
+      .price-content-clocks-block__coast {
         display: flex;
-        .price-content-clocks-block__coast__time{
+        width: 100%;
+        .price-content-clocks-block__coast__time {
           background-color: $orange;
-          padding: 6px;
+          padding: 10px;
           border-radius: 10px 0 0px 10px;
-          @include subTitle;
-          font-size: 30px;
+          @include PriceFont;
+          @include tablet {
+            padding: 5px;
+          }
           color: $realWhite;
+          width: 65%;
+          padding-left: 16px;
+          margin-bottom: 16px;
+          text-align: center;
         }
-        .price-content-clocks-block__coast__money{
+        .price-content-clocks-block__coast__money {
           background-color: $backgroundBlue;
-          padding: 6px;
+          padding: 10px;
           border-radius: 0 10px 10px 0;
-          @include subTitle;
+          @include PriceFont;
           font-style: italic;
-          font-size: 30px;
+          width: 35%;
+          margin-bottom: 16px;
+          text-align: center;
+          @include tablet {
+            padding: 5px;
+          }
+
         }
       }
     }

@@ -26,8 +26,8 @@ const Footer = (): JSX.Element => (
       </div>
     </div>
     <div className="footer__contacts">
-      <a href="tel:+375(33)699-86-04" className="footer__phone">
-        +375(33)999-88-00
+      <a href="tel:+375(33)917-80-41" className="footer__phone">
+        +375(33)917-80-41
       </a>
       <a href="mailto:garage@mail.ru" className="footer__email">
         garage@mail.ru

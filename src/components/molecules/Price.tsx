@@ -3,7 +3,7 @@ import TimeCoast from "../atoms/TimeCoast";
 import { priceList } from "../../static/price";
 
 const Price = (): JSX.Element => (
-  <section className="common-margin common__top-margin__wrapper content">
+  <section className="common-margin common__top-margin__wrapper content priceVisibleMobile">
     <div id="price" className="common__top-margin" />
     <h2 className="common-title">
       <span className="orange-letter">Ц</span>ены
@@ -13,8 +13,8 @@ const Price = (): JSX.Element => (
         <div className="price-left__first">
           <h3 className="price-title">Стоимость аренды</h3>
           <p className="price-description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non,
-            deleniti excepturi reprehenderit odio ut veritatis.
+            В зависимости от колличества арендуемого времени вы получаете скидку
+            за каждый последующий час аренды.
           </p>
           <div className="price-template">
             <div className="price-template__top">

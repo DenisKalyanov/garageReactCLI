@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../../styles/organisms/Main.scss";
 import { menuItems } from "../../static/menuItems";
 import { useEffect, useState } from "react";
-import PriceDesctop from "../molecules/PriceDesctop";
+import PriceDesktop from "../molecules/PriceDesktop";
 
 const Catalog = loadable(() => import("../molecules/Catalog"));
 const Price = loadable(() => import("../molecules/Price"));
@@ -47,8 +47,9 @@ const Main = (): JSX.Element => {
           <p className="description">
             GARAGE на час - это место, где ВЫ сами сможете самостоятельно
             обслужить свою машину и будете уверены что все работы выполнены
-            качественно. <br/>Мы предоставляем Вам хороший инструмент в
-            помещении, которое оборудовано двумя подъёмниками и смотровой ямой.
+            качественно. <br />
+            Мы предоставляем Вам хороший инструмент в помещении, которое
+            оборудовано двумя подъёмниками и смотровой ямой.
           </p>
           <img
             onClick={onClick}
@@ -61,8 +62,8 @@ const Main = (): JSX.Element => {
         </div>
       </section>
       <Catalog />
-      {/* <Price /> */}
-      <PriceDesctop />
+      <Price />
+      <PriceDesktop />
       <Bonus />
       <Map />
     </main>

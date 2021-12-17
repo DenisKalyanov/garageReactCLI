@@ -8,7 +8,6 @@ import Forsage_65601 from "../assets/images/catalog/brakes/Forsage-65601.png";
 import TA_B1009 from "../assets/images/catalog/brakes/TA-B1009.png";
 import YT_2180 from "../assets/images/catalog/brakes/YT-2180.png";
 
-
 //engine
 import BAS_TECHNIC from "../assets/images/catalog/engine/Bas-technic-Germany.png";
 import cepMasloFilter from "../assets/images/catalog/engine/cepMasloFilter.png";
@@ -26,6 +25,46 @@ import siemnikMaslo from "../assets/images/catalog/engine/siemnikMaslo.png";
 import toptul_GAAI0401 from "../assets/images/catalog/engine/toptul-GAAI0401.png";
 import UZM_80 from "../assets/images/catalog/engine/UZM-80.png";
 
+//keys
+import Key39833 from "../assets/images/catalog/keys/Key39833.png";
+import klychiNakidnie from "../assets/images/catalog/keys/klychiNakidnie.png";
+import klychiRazreznie from "../assets/images/catalog/keys/klychiRazreznie.png";
+import RF_1022_04 from "../assets/images/catalog/keys/RF-1022-04.png";
+import sorvanieGrani from "../assets/images/catalog/keys/sorvanieGrani.png";
+import TORX_FORCE from "../assets/images/catalog/keys/TORX-FORCE.png";
+import torxGolovki from "../assets/images/catalog/keys/torxGolovki.png";
+
+//locksmith
+import bolgarka from "../assets/images/catalog/locksmith/bolgarka.png";
+import drel from "../assets/images/catalog/locksmith/drel.png";
+import zatochka from "../assets/images/catalog/locksmith/zatochka.png";
+import gaikolom from "../assets/images/catalog/locksmith/gaikolom.png";
+import M050_3_1 from "../assets/images/catalog/locksmith/M050-3-1.png";
+import obratniMolotokk from "../assets/images/catalog/locksmith/obratniMolotokk.png";
+import press from "../assets/images/catalog/locksmith/press.png";
+import tiski from "../assets/images/catalog/locksmith/tiski.png";
+import YT_2801 from "../assets/images/catalog/locksmith/YT-2801.png";
+
+//other
+import JTC_C_2120 from "../assets/images/catalog/other/JTC-C-2120.png";
+import multimetr from "../assets/images/catalog/other/multimetr.png";
+import toptul_JGAI1802 from "../assets/images/catalog/other/toptul-JGAI1802.png";
+import YT_0844 from "../assets/images/catalog/other/YT-0844.png";
+import YT_2313 from "../assets/images/catalog/other/YT-2313.png";
+
+//pneumatics
+import Eland_Wind_50_2CO from "../assets/images/catalog/pneumatics/Eland-Wind-50-2CO.png";
+import pneumozybilo from "../assets/images/catalog/pneumatics/pneumozybilo.png";
+import pnevmoGaikovert from "../assets/images/catalog/pneumatics/pnevmoGaikovert.png";
+
+//PULLERS
+import F_904U4 from "../assets/images/catalog/pullers/F-904U4.png";
+import pryjini from "../assets/images/catalog/pullers/pryjini.png";
+import RF_5049A from "../assets/images/catalog/pullers/RF-5049A.png";
+import siemnik1 from "../assets/images/catalog/pullers/siemnik1.png";
+import siemnik2 from "../assets/images/catalog/pullers/siemnik2.png";
+import siemnik3 from "../assets/images/catalog/pullers/siemnik3.png";
+import siemnik4 from "../assets/images/catalog/pullers/siemnik4.png";
 
 export const catalogItems = [
   { id: 1, title: "Базовый", section: "" },
@@ -41,231 +80,228 @@ export const catalogItems = [
 export const catalogList = {
   basic: [
     {
-      title: "MATRIX_13562",
+      title: "MATRIX 13562",
       description: {
-        firstTitle: "Подъем",
-        firstDescription: "4 тонны",
-        secondTitle: "Высота подъема",
-        secondDescription: "1780мм",
+        firstTitle: "Инструмент",
+        firstDescription: "Слесарный",
+        secondTitle: "Предметов",
+        secondDescription: "12 шт.",
       },
       image: MATRIX_13562,
     },
     {
-      title: "MATRIX_15426",
+      title: "MATRIX 15426",
       description: {
-        firstTitle: "Подъем",
-        firstDescription: "3 тонны",
-        secondTitle: "Высота подъема",
-        secondDescription: "1880мм",
+        firstTitle: "Инструмент",
+        firstDescription: "Ключи",
+        secondTitle: "Предметов",
+        secondDescription: "12 шт.",
       },
       image: MATRIX_15426,
     },
     {
-      title: "YT_08513",
+      title: "YT 08513",
       description: {
-        firstTitle: "Подъем",
-        firstDescription: "5 тонн",
-        secondTitle: "Высота подъема",
-        secondDescription: "1400мм",
+        firstTitle: "Инструмент",
+        firstDescription: "Фонарик",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: YT_08513,
     },
     {
-      title: "YT_38791",
+      title: "YT 38791",
       description: {
-        firstTitle: "Подъем",
-        firstDescription: "5 тонн",
-        secondTitle: "Высота подъема",
-        secondDescription: "1400мм",
+        firstTitle: "Инструмент",
+        firstDescription: "Набор",
+        secondTitle: "Предметов",
+        secondDescription: "108 шт.",
       },
       image: YT_38791,
     },
   ],
 
-
   brakes: [
     {
-      title: "brakes 1",
+      title: "FORSAGE 65601",
       description: {
-        firstTitle: "Мощность",
-        firstDescription: "700Н",
-        secondTitle: "Вес",
-        secondDescription: "2кг",
+        firstTitle: "Инструмент",
+        firstDescription: "Труборез",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: Forsage_65601,
     },
     {
-      title: "brakes 2",
+      title: "TA B1009",
       description: {
-        firstTitle: "Мощность",
-        firstDescription: "700Н",
-        secondTitle: "Вес",
-        secondDescription: "2кг",
+        firstTitle: "Инструмент",
+        firstDescription: "Для сведения тормозных цилиндров",
+        secondTitle: "Предметов",
+        secondDescription: "18 шт.",
       },
       image: TA_B1009,
     },
     {
-      title: "brakes 3",
+      title: "YT 2180",
       description: {
-        firstTitle: "Мощность",
-        firstDescription: "700Н",
-        secondTitle: "Вес",
-        secondDescription: "2кг",
+        firstTitle: "Инструмент",
+        firstDescription: "Для оппрессовки тормозной системы",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: YT_2180,
     },
   ],
 
-
-
   engine: [
     {
-      title: "engine 1",
+      title: "BAS TECHNIC",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "100 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Съемник масляных фильтров",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: BAS_TECHNIC,
     },
     {
-      title: "engine 2",
+      title: "FORCE",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "70 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Нет",
+        firstTitle: "Инструмент",
+        firstDescription: "Цепной съемник масляных фильтров",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: cepMasloFilter,
     },
     {
-      title: "engine 3",
+      title: "FORCE",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Ключ динаметр.",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: dinamometrika,
     },
     {
-      title: "engine 3",
+      title: "FORCE",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Ключ динаметр.",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: force_6474630,
     },
     {
-      title: "engine 3",
+      title: "HBC",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Набор стопоров для замены ГРМ",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: HCB_A2207,
     },
     {
-      title: "engine 3",
+      title: "HBC",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Набор стопоров для замены ГРМ",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: HCB_A4005,
     },
     {
-      title: "engine 3",
+      title: "HOREX",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Компрессометр дизельный",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: HZ_271003L,
     },
     {
-      title: "engine 3",
+      title: "JTC",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Набор для замены ГРМ",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: JTC_4090,
     },
     {
-      title: "engine 3",
+      title: "JTC",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Набор фиксаторов дизельных двигателей для замены ГРМ",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: JTC_4843,
     },
     {
-      title: "engine 3",
+      title: "JTC",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Набор фиксаторов двигателей для замены ГРМ",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: JTC_4845,
     },
     {
-      title: "engine 3",
+      title: "HOREX",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Компрессометр безниновый",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: Partner_PA_G324,
     },
     {
-      title: "engine 3",
+      title: "FORCE",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Для восстановления резьбы сливного отверстия поддона",
+        secondTitle: "Предметов",
+        secondDescription: "7 шт.",
       },
       image: RF_917G17,
     },
     {
-      title: "engine 3",
+      title: "FORCE",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Съемник маслянных фильтров",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: siemnikMaslo,
     },
     {
-      title: "engine 3",
+      title: "TOPTUL",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Набор шпиковертов",
+        secondTitle: "Предметов",
+        secondDescription: "4 шт.",
       },
       image: toptul_GAAI0401,
     },
     {
-      title: "engine 3",
+      title: "TROMMELBERG",
       description: {
-        firstTitle: "Комплект",
-        firstDescription: "20 шт.",
-        secondTitle: "Магнитный",
-        secondDescription: "Да",
+        firstTitle: "Инструмент",
+        firstDescription: "Для сбора масла",
+        secondTitle: "Предметов",
+        secondDescription: "1 шт.",
       },
       image: UZM_80,
     },
@@ -280,7 +316,7 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Да",
       },
-      image: YT_38791,
+      image: Key39833,
     },
     {
       title: "keys 2",
@@ -290,7 +326,7 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Нет",
       },
-      image: YT_38791,
+      image: klychiNakidnie,
     },
     {
       title: "keys 3",
@@ -300,7 +336,47 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Да",
       },
-      image: YT_38791,
+      image: klychiRazreznie,
+    },
+    {
+      title: "keys 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: RF_1022_04,
+    },
+    {
+      title: "keys 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: sorvanieGrani,
+    },
+    {
+      title: "keys 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: TORX_FORCE,
+    },
+    {
+      title: "keys 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: torxGolovki,
     },
   ],
 
@@ -313,7 +389,7 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Да",
       },
-      image: YT_38791,
+      image: bolgarka,
     },
     {
       title: "locksmith 2",
@@ -323,7 +399,7 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Нет",
       },
-      image: YT_38791,
+      image: drel,
     },
     {
       title: "locksmith 3",
@@ -333,7 +409,67 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Да",
       },
-      image: YT_38791,
+      image: zatochka,
+    },
+    {
+      title: "locksmith 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: gaikolom,
+    },
+    {
+      title: "locksmith 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: M050_3_1,
+    },
+    {
+      title: "locksmith 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: obratniMolotokk,
+    },
+    {
+      title: "locksmith 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: press,
+    },
+    {
+      title: "locksmith 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: tiski,
+    },
+    {
+      title: "locksmith 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: YT_2801,
     },
   ],
 
@@ -346,7 +482,7 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Да",
       },
-      image: YT_38791,
+      image: JTC_C_2120,
     },
     {
       title: "other 2",
@@ -356,7 +492,7 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Нет",
       },
-      image: YT_38791,
+      image: multimetr,
     },
     {
       title: "other 3",
@@ -366,7 +502,27 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Да",
       },
-      image: YT_38791,
+      image: toptul_JGAI1802,
+    },
+    {
+      title: "other 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: YT_0844,
+    },
+    {
+      title: "other 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: YT_2313,
     },
   ],
 
@@ -379,7 +535,7 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Да",
       },
-      image: YT_38791,
+      image: Eland_Wind_50_2CO,
     },
     {
       title: "pneumatics 2",
@@ -389,7 +545,7 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Нет",
       },
-      image: YT_38791,
+      image: pneumozybilo,
     },
     {
       title: "pneumatics 3",
@@ -399,7 +555,7 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Да",
       },
-      image: YT_38791,
+      image: pnevmoGaikovert,
     },
   ],
 
@@ -412,7 +568,7 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Да",
       },
-      image: YT_38791,
+      image: F_904U4,
     },
     {
       title: "pullers 2",
@@ -422,7 +578,7 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Нет",
       },
-      image: YT_38791,
+      image: pryjini,
     },
     {
       title: "pullers 3",
@@ -432,7 +588,47 @@ export const catalogList = {
         secondTitle: "Магнитный",
         secondDescription: "Да",
       },
-      image: YT_38791,
+      image: RF_5049A,
+    },
+    {
+      title: "pullers 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: siemnik1,
+    },
+    {
+      title: "pullers 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: siemnik2,
+    },
+    {
+      title: "pullers 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: siemnik3,
+    },
+    {
+      title: "pullers 3",
+      description: {
+        firstTitle: "Комплект",
+        firstDescription: "20 шт.",
+        secondTitle: "Магнитный",
+        secondDescription: "Да",
+      },
+      image: siemnik4,
     },
   ],
 };

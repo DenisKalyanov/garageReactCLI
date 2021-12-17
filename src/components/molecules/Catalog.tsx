@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from "react";
+import { useState, lazy, Suspense, useEffect } from "react";
 import Slider from "react-slick";
 import { Switch, Route, Link } from "react-router-dom";
 import { catalogItems, catalogList } from "../../static/catalog";
@@ -18,12 +18,17 @@ const Catalog = (): JSX.Element => {
     arrows: false,
     swipeToSlide: true,
     focusOnSelect: true,
+    currentSlide: 0,
   };
-
+  
   const changeCurrentItem = (item: any) => {
     setIsActive(item.id);
     setCurrentItem(item.section);
-    catalogList[item.section] ? setCurrentList(catalogList[item.section]) : setCurrentList(catalogList.basic);
+    //@ts-ignore
+    catalogList[item.section]
+        //@ts-ignore
+      ? setCurrentList(catalogList[item.section])
+      : setCurrentList(catalogList.basic);
   };
 
   return (
@@ -34,8 +39,20 @@ const Catalog = (): JSX.Element => {
       <Slider {...settings}>
         {catalogItems.map(
           (item): JSX.Element => (
-            <div key={item.id} className="main-catalog__menu__wrapper" aria-hidden="false">
-              <Link to={`/${item.section}`} type="button" className={`main-catalog__menu ${isActive === item.id ? "main-catalog__menu__active" : null}`} onClick={() => changeCurrentItem(item)} aria-label={item.title}>
+            <div
+              key={item.id}
+              className="main-catalog__menu__wrapper"
+              aria-hidden="false"
+            >
+              <Link
+                to={`/${item.section}`}
+                type="button"
+                className={`main-catalog__menu ${
+                  isActive === item.id ? "main-catalog__menu__active" : null
+                }`}
+                onClick={() => changeCurrentItem(item)}
+                aria-label={item.title}
+              >
                 {item.title}
               </Link>
             </div>

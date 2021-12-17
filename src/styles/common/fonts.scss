@@ -124,3 +124,11 @@
     font-size: 18px;
   }
 }
+
+@mixin PriceFont {
+  font-family: "Rubik", Arial, sans-serif;
+  font-size: 28px;
+  @include tablet {
+    font-size: 20px;
+  }
+}

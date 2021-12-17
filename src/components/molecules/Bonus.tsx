@@ -2,11 +2,10 @@ import "../../styles/molecules/Bonus.scss";
 import Kit from "../../assets/images/catalog/basic/YT-38791.png";
 
 const bonuses = [
-  { title: "Набор предохранителей", img: Kit },
+  { title: "Предохранители", img: Kit },
   { title: "Перчатки", img: Kit },
   { title: "Термоусадка", img: Kit },
   { title: "Наконечник ПВТ", img: Kit },
-  { title: 'Табличка: "мешает машина" ', img: Kit },
   { title: "Изолента", img: Kit },
 ];
 
