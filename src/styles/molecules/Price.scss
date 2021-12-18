@@ -275,3 +275,19 @@
     }
   }
 }
+
+
+.price-content-wrapper__desktop__top{
+  display: flex;
+  background-color: $realWhite;
+  border-radius: 10px;
+  @include common-shadow;
+  padding: 20px;
+  padding-bottom: 0;
+
+  margin-bottom: 20px;
+
+  .price-content-wrapper__desktop__top-coast{
+    display: flex;
+  }
+}

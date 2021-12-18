@@ -1,4 +1,5 @@
 import "../../styles/molecules/Price.scss";
+import Car from "../../assets/images/car.png";
 
 const prices = [
   {
@@ -53,7 +54,22 @@ const PriceDesktop = (): JSX.Element => (
       <span className="orange-letter">Ц</span>ены
     </h2>
     <div className="price-content-wrapper__desktop">
-      <div>1 час 10 рублей</div>
+      <div className="price-content-wrapper__desktop__top">
+        <div className="price-content-wrapper__desktop__top-coast">
+          <p className="price-content-wrapper__desktop__top-price__time">1 час</p>
+          <p className="price-content-wrapper__desktop__top-price__value">10р.</p>
+        </div>
+        <div>
+          <h3>Стоимость аренды</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
+            nisi, cupiditate laborum expedita velit molestias, consequatur harum
+            error nam quaerat nesciunt veritatis dolor ratione? Dolore possimus
+            ipsa praesentium cumque non.
+          </p>
+        </div>
+        <img src={Car} alt="" />
+      </div>
       <div className="price-content-wrapper-clocks__desktop">
         {prices.map((item) => (
           <div className="price-content-clocks-block">
