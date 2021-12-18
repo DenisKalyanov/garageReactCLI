@@ -1,6 +1,6 @@
 import "../../styles/molecules/Bonus.scss";
 import "../../styles/molecules/Map.scss";
-import Build from "../../assets/images/build.jpeg";
+import Build from "../../assets/images/build.jpg";
 
 const Map: React.FC<any> = () => (
   <section className="map_wrapper" id="contacts">

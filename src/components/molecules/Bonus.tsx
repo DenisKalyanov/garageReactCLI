@@ -1,5 +1,5 @@
 import "../../styles/molecules/Bonus.scss";
-import Kit from "../../assets/images/catalog/basic/YT-38791.png";
+import Kit from "../../assets/images/bonus.png";
 
 const bonuses = [
   { title: "Предохранители", img: Kit },
@@ -7,6 +7,7 @@ const bonuses = [
   { title: "Термоусадка", img: Kit },
   { title: "Наконечник ПВТ", img: Kit },
   { title: "Изолента", img: Kit },
+  { title: "Растворитель", img: Kit },
 ];
 
 const Bonus: React.FC = () => (
