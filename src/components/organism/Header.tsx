@@ -25,7 +25,7 @@ const Header: React.FC = (): JSX.Element => {
           <span className="header__time__space"> &nbsp;</span>
           <span>ДО 23:00</span>
         </p>
-        <a href="tel:+375(33)699-86-04" className="header__phone__link">
+        <a href="tel:+375(33)917-80-41" className="header__phone__link">
           <img
             src={Phone}
             alt="Телефон +375339178041"

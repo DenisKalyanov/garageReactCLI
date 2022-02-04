@@ -29,9 +29,9 @@ const Footer = (): JSX.Element => (
       <a href="tel:+375(33)917-80-41" className="footer__phone">
         +375(33)917-80-41
       </a>
-      <a href="mailto:garage@mail.ru" className="footer__email">
+      {/* <a href="mailto:garage@mail.ru" className="footer__email">
         garage@mail.ru
-      </a>
+      </a> */}
     </div>
   </footer>
 );

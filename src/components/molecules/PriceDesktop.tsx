@@ -49,7 +49,7 @@ const prices = [
 
 const PriceDesktop = (): JSX.Element => (
   <section className="common-margin common__top-margin__wrapper content priceVisibleDesktop">
-    <div id="price" className="common__top-margin" />
+    <div id="priceDesktop" className="common__top-margin" />
     <h2 className="common-title">
       <span className="orange-letter">Ц</span>ены
     </h2>

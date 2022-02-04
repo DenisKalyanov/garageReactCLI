@@ -61,8 +61,14 @@
   font-family: "Arial";
   font-weight: 800;
   font-style: italic;
-  font-size: 20px;
+  font-size: 22px;
   text-decoration: none;
+  @include tablet {
+    font-size: 18px;
+  }
+  @include mobile {
+    font-size: 16px;
+  }
 }
 
 @mixin time {

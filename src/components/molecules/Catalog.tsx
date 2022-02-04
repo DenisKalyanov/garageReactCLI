@@ -7,7 +7,7 @@ const CatalogItem = lazy(() => import("./CatalogItem"));
 const Catalog = (): JSX.Element => {
   const [currentList, setCurrentList] = useState(catalogList.basic);
   const [currentItem, setCurrentItem] = useState(catalogItems[0].section);
-  const [isActive, setIsActive] = useState(1);
+  const [isActive, setIsActive] = useState();
 
   const settings = {
     dots: false,

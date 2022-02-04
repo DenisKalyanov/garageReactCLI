@@ -8,10 +8,9 @@ import "slick-carousel/slick/slick-theme.css";
 import "../../styles/organisms/Main.scss";
 import { menuItems } from "../../static/menuItems";
 import { useEffect, useState } from "react";
-import PriceDesktop from "../molecules/PriceDesktop";
-
 const Catalog = loadable(() => import("../molecules/Catalog"));
 const Price = loadable(() => import("../molecules/Price"));
+const PriceDesktop = loadable(() => import("../molecules/PriceDesktop"));
 const Bonus = loadable(() => import("../molecules/Bonus"));
 const Map = loadable(() => import("../molecules/Map"));
 

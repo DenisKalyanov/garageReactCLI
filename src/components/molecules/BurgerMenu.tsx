@@ -51,9 +51,9 @@ const BurgerMenu: React.FC<Props> = ({ changeVisibleBurgerMenu }): JSX.Element =
           <a href="tel:+375(33)917-80-41" className="burger-menu__phone">
             +375(33)917-80-41
           </a>
-          <a href="mailto:garage@mail.ru" className="burger-menu__email">
+          {/* <a href="mailto:garage@mail.ru" className="burger-menu__email">
             garage@mail.ru
-          </a>
+          </a> */}
           <div className="burger-menu__buttons">
             <img src={Instagram} alt="" className="burger-menu__button" />
             <img src={Viber} alt="" className="burger-menu__button" />

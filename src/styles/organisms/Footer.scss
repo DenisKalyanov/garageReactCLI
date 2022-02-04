@@ -18,6 +18,7 @@
     .footer__buttons {
       display: flex;
       align-items: center;
+      justify-content: space-around;
       .footer__button {
         border: none;
         width: 30px;
@@ -38,7 +39,6 @@
     .footer__phone {
       position: relative;
       @include contacts;
-      font-size: 16px;
       color: $grey;
       &::before {
         // @include svgBeforePosition;
@@ -48,7 +48,6 @@
     .footer__email {
       position: relative;
       @include contacts;
-      font-size: 16px;
       color: $grey;
       &::before {
         // @include svgBeforePosition;

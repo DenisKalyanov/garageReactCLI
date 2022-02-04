@@ -21,12 +21,16 @@
     }
   }
   .map__description {
-    @include time;
-    font-size: 18px;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 900;
     margin-left: 20px;
     margin-bottom: 5px;
     margin-right: 20px;
-    @include littleMobile {
+    @include tablet {
+      font-size: 20px;
+    }
+    @include mobile {
       font-size: 16px;
     }
   }
